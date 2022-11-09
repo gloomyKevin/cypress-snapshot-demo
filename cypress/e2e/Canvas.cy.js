@@ -4,6 +4,8 @@ describe("Some app", () => {
     cy.get("canvas");
 
     // 整页生成快照
+    cy.get(".test1").toMatchImageSnapshot();
+    cy.get(".test2").toMatchImageSnapshot();
     cy.get("body").toMatchImageSnapshot();
   });
 });

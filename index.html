@@ -6,16 +6,29 @@
 </head>
 <body>
 <div>
-    <canvas width="400" height="400">
-        Alternative text
-    </canvas>
+    <!-- <div class="test1"> -->
+        <canvas class="test1" width="400" height="400">
+            Alternative text
+        </canvas>
+    <!-- </div> -->
+    <!-- <div class="test2"> -->
+        <canvas class="test2" width="40" height="40">
+            Alternative text
+        </canvas>
+    <!-- </div> -->
 </div>
 </body>
 <script>
-    const canvas = document.querySelector('canvas');
+    const canvas = document.querySelector('.test1');
     const context = canvas.getContext('2d');
-    // context.fillStyle = 'yellow';
-    context.fillStyle = 'red';
+    context.fillStyle = 'yellow';
+    // context.fillStyle = 'red';
     context.fillRect(20, 20, 200, 200);
+
+    const canvas2 = document.querySelector('.test2');
+    const context2 = canvas2.getContext('2d');
+    context2.fillStyle = 'blue';
+    // context.fillStyle = 'red';
+    context2.fillRect(20, 20, 200, 200);
 </script>
 </html>
