@@ -1,5 +1,8 @@
 const { defineConfig } = require('cypress')
 const { initPlugin } = require('cypress-plugin-snapshots/plugin')
+const { 
+  addMatchImageSnapshotPlugin, 
+  } = require('cypress-image-snapshot/plugin');
 
 module.exports = defineConfig({
   env: {
@@ -22,6 +25,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
       initPlugin(on, config);
+      addMatchImageSnapshotPlugin(on, config); 
       return config;
     },
   }
